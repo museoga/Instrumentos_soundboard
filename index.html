@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Instrumentos</title>
   <style>
     body {
       background-image: url('Images/background.png');
@@ -70,10 +69,16 @@
     <button onclick="showRelatos()">Relatos</button>
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
+ 
+  <script>
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
 
-  <h1>Instrumentos</h1>
-
-  <h2>Trutruka</h2>
+    function showInstrumentos() {
+      
+      <h2>Trutruka</h2>
   <div class="soundboard">
     <!-- Generate buttons for Trutruka -->
     <script>
@@ -128,15 +133,7 @@
       }
     </script>
   </div>
-
-  <script>
-    function playSound(soundPath) {
-      const audio = new Audio(soundPath);
-      audio.play();
-    }
-
-    function showInstrumentos() {
-      // Code to show Instrumentos content
+      
       console.log("Showing Instrumentos");
     }
 
