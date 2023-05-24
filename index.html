@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Instrumentos</title>
+  <style>
+    body {
+      background-image: url('Images/background.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #FFFFFF;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #000000;
+      margin-top: 17%;
+    }
+    
+    h2 {
+      color: #000000;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .soundboard {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .soundboard button {
+      width: 100px;
+      height: 100px;
+      background-color: #85071f;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      font-size: 32px;
+      color: #FFFFFF;
+      text-align: center;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .header button {
+      margin: 0 10px;
+      background-color: #333333;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <button onclick="showInstrumentos()">Instrumentos</button>
+    <button onclick="showRelatos()">Relatos</button>
+    <button onclick="showLenguaje()">Lenguaje</button>
+  </div>
+
+  <h1>Instrumentos</h1>
+
+  <h2>Trutruka</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Trutruka -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Trutruka/Tru ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Wada</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Wada -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Wada/Wad ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pilolay</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pilolay -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pifilca</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pifilca -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <script>
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
+
+    function showInstrumentos() {
+      // Code to show Instrumentos content
+      console.log("Showing Instrumentos");
+    }
+
+    function showRelatos() {
+      // Code to show Relatos content
+      console.log("Showing Relatos");
+    }
+
+    function showLenguaje() {
+      // Code to show Lenguaje content
+      console.log("Showing Lenguaje");
+    }
+  </script>
+</body>
+</html>
