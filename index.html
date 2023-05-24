@@ -25,7 +25,7 @@
 
     .soundboard {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
       justify-items: center;
       align-items: center;
@@ -37,7 +37,7 @@
       justify-content: center;
       gap: 10px;
       margin-bottom: 10px;
-      align-items: row;
+      align-items: center;
     }
 
     .soundboard button {
@@ -56,19 +56,13 @@
       text-align: center;
     }
 
-    .soundboard.rel {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 15%;
-    }
-
+    .soundboard.rel,
     .soundboard.leng {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
+      justify-items: center;
+      align-items: center;
       margin-top: 15%;
     }
 
@@ -189,21 +183,21 @@
 
     function showInstrumentos() {
       const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      instrumentosSoundboard.style.display = "block";
+      instrumentosSoundboard.style.display = "grid";
       document.getElementById("relatosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
       const relatosSoundboard = document.getElementById("relatosSoundboard");
-      relatosSoundboard.style.display = "block";
+      relatosSoundboard.style.display = "grid";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
       const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-      lenguajeSoundboard.style.display = "block";
+      lenguajeSoundboard.style.display = "grid";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
     }
