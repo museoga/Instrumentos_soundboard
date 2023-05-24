@@ -24,9 +24,11 @@
     }
 
     .soundboard {
-      display: none;
-      align-self: start;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      justify-items: center;
+      align-items: center;
       margin-top: 15%;
     }
 
