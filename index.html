@@ -71,8 +71,6 @@
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
 
-  <h1>Instrumentos</h1>
-
   <div id="instrumentosSoundboard" class="soundboard">
     <h2>Trutruka</h2>
     <!-- Generate buttons for Trutruka -->
@@ -86,9 +84,50 @@
       }
     </script>
   </div>
+  
+  <h2>Wada</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Wada -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Wada/Wad ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pilolay</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pilolay -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pifilca</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pifilca -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
 
   <div id="relatosSoundboard" class="soundboard">
-    <h2>Relatos</h2>
     <!-- Generate buttons for Relatos -->
     <script>
       for (let i = 1; i <= 10; i++) {
@@ -102,7 +141,6 @@
   </div>
 
   <div id="lenguajeSoundboard" class="soundboard">
-    <h2>Lenguaje</h2>
     <!-- Generate buttons for Lenguaje -->
     <script>
       for (let i = 1; i <= 20; i++) {
