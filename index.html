@@ -34,6 +34,7 @@
       display: flex;
       justify-content: center;
       gap: 10px;
+      margin-bottom: 10px;
     }
 
     .soundboard button {
@@ -53,15 +54,17 @@
     }
 
     .soundboard.rel {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       margin-top: 15%;
     }
 
     .soundboard.leng {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
       margin-top: 15%;
     }
