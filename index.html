@@ -25,10 +25,17 @@
 
     .soundboard {
       display: none;
-      justify-content: center;
-      align-items: center;
-      margin-top: 20%;
       flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .soundboard-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 10px;
     }
 
@@ -74,53 +81,61 @@
   </div>
 
   <div id="instrumentosSoundboard" class="soundboard">
-    <h2>Trutruka</h2>
-    <!-- Generate buttons for Trutruka -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Trutruka/Tru ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
+    <div class="soundboard-row">
+      <h2>Trutruka</h2>
+      <!-- Generate buttons for Trutruka -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Trutruka/Tru ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+  
+    <div class="soundboard-row">
+      <h2>Wada</h2>
+      <!-- Generate buttons for Wada -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Wada/Wad ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
 
-    <h2>Wada</h2>
-    <!-- Generate buttons for Wada -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Wada/Wad ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
+    <div class="soundboard-row">
+      <h2>Pilolay</h2>
+      <!-- Generate buttons for Pilolay -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
 
-    <h2>Pilolay</h2>
-    <!-- Generate buttons for Pilolay -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
-
-    <h2>Pifilca</h2>
-    <!-- Generate buttons for Pifilca -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
+    <div class="soundboard-row">
+      <h2>Pifilca</h2>
+      <!-- Generate buttons for Pifilca -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
   </div>
 
   <div id="relatosSoundboard" class="soundboard">
@@ -157,21 +172,21 @@
 
     function showInstrumentos() {
       const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      instrumentosSoundboard.style.display = "flex";
+      instrumentosSoundboard.style.display = "block";
       document.getElementById("relatosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
       const relatosSoundboard = document.getElementById("relatosSoundboard");
-      relatosSoundboard.style.display = "flex";
+      relatosSoundboard.style.display = "block";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
       const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-      lenguajeSoundboard.style.display = "flex";
+      lenguajeSoundboard.style.display = "block";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
     }
