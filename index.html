@@ -25,7 +25,7 @@
 
     .soundboard {
       display: grid;
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 10px;
       justify-items: center;
       align-items: center;
@@ -33,11 +33,12 @@
     }
 
     .soundboard-row {
-      display: flex;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
       gap: 10px;
-      margin-bottom: 10px;
+      justify-items: center;
       align-items: center;
+      margin-bottom: 10px;
     }
 
     .soundboard button {
@@ -54,16 +55,6 @@
       font-size: 32px;
       color: #FFFFFF;
       text-align: center;
-    }
-
-    .soundboard.rel,
-    .soundboard.leng {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 10px;
-      justify-items: center;
-      align-items: center;
-      margin-top: 15%;
     }
 
     .header {
@@ -149,7 +140,7 @@
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard rel">
+  <div id="relatosSoundboard" class="soundboard">
     <!-- Generate buttons for Relatos -->
     <script>
       for (let i = 1; i <= 10; i++) {
@@ -162,7 +153,7 @@
     </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard leng">
+  <div id="lenguajeSoundboard" class="soundboard">
     <!-- Generate buttons for Lenguaje -->
     <script>
       for (let i = 1; i <= 20; i++) {
