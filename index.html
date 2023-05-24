@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Instrumentos</title>
   <style>
     body {
       background-image: url('Images/background.png');
@@ -23,7 +24,7 @@
     }
 
     .soundboard {
-      display: flex;
+      display: none;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
@@ -69,17 +70,11 @@
     <button onclick="showRelatos()">Relatos</button>
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
- 
-  <script>
-    function playSound(soundPath) {
-      const audio = new Audio(soundPath);
-      audio.play();
-    }
 
-    function showInstrumentos() {
-      
-      <h2>Trutruka</h2>
-  <div class="soundboard">
+  <h1>Instrumentos</h1>
+
+  <div id="instrumentosSoundboard" class="soundboard">
+    <h2>Trutruka</h2>
     <!-- Generate buttons for Trutruka -->
     <script>
       for (let i = 1; i <= 8; i++) {
@@ -92,13 +87,13 @@
     </script>
   </div>
 
-  <h2>Wada</h2>
-  <div class="soundboard">
-    <!-- Generate buttons for Wada -->
+  <div id="relatosSoundboard" class="soundboard">
+    <h2>Relatos</h2>
+    <!-- Generate buttons for Relatos -->
     <script>
-      for (let i = 1; i <= 8; i++) {
+      for (let i = 1; i <= 10; i++) {
         document.write(`
-          <button onclick="playSound('Wada/Wad ${i}.wav')">
+          <button onclick="playSound('Relatos/Relato ${i}.wav')">
             ${i}
           </button>
         `);
@@ -106,13 +101,13 @@
     </script>
   </div>
 
-  <h2>Pilolay</h2>
-  <div class="soundboard">
-    <!-- Generate buttons for Pilolay -->
+  <div id="lenguajeSoundboard" class="soundboard">
+    <h2>Lenguaje</h2>
+    <!-- Generate buttons for Lenguaje -->
     <script>
-      for (let i = 1; i <= 8; i++) {
+      for (let i = 1; i <= 20; i++) {
         document.write(`
-          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+          <button onclick="playSound('Lenguaje/Leng ${i}.wav')">
             ${i}
           </button>
         `);
@@ -120,31 +115,31 @@
     </script>
   </div>
 
-  <h2>Pifilca</h2>
-  <div class="soundboard">
-    <!-- Generate buttons for Pifilca -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
-  </div>
-      
-      console.log("Showing Instrumentos");
+  <script>
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
+
+    function showInstrumentos() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      instrumentosSoundboard.style.display = "block";
+      document.getElementById("relatosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
-      // Code to show Relatos content
-      console.log("Showing Relatos");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      relatosSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
-      // Code to show Lenguaje content
-      console.log("Showing Lenguaje");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+      lenguajeSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("relatosSoundboard").style.display = "none";
     }
   </script>
 </body>
