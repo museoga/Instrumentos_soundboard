@@ -25,16 +25,13 @@
 
     .soundboard {
       display: none;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin-top: 17%;
+      margin-top: 20px;
     }
 
     .soundboard-row {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
     }
@@ -53,6 +50,18 @@
       font-size: 32px;
       color: #FFFFFF;
       text-align: center;
+    }
+
+    .soundboard.rel {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .soundboard.leng {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
     }
 
     .header {
@@ -138,7 +147,7 @@
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard">
+  <div id="relatosSoundboard" class="soundboard rel">
     <!-- Generate buttons for Relatos -->
     <script>
       for (let i = 1; i <= 10; i++) {
@@ -151,7 +160,7 @@
     </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard">
+  <div id="lenguajeSoundboard" class="soundboard leng">
     <!-- Generate buttons for Lenguaje -->
     <script>
       for (let i = 1; i <= 20; i++) {
@@ -190,6 +199,10 @@
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
     }
+
+    window.onload = function() {
+      showInstrumentos();
+    };
   </script>
 </body>
 </html>
