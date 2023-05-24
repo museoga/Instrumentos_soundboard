@@ -84,10 +84,8 @@
         `);
       }
     </script>
-  </div>
-  
-  <div id="instrumentosSoundboard" class="soundboard">
-  <h2>Wada</h2>
+
+    <h2>Wada</h2>
     <!-- Generate buttons for Wada -->
     <script>
       for (let i = 1; i <= 8; i++) {
@@ -98,10 +96,8 @@
         `);
       }
     </script>
-  </div>
 
-  <div id="instrumentosSoundboard" class="soundboard">
-  <h2>Pilolay</h2>
+    <h2>Pilolay</h2>
     <!-- Generate buttons for Pilolay -->
     <script>
       for (let i = 1; i <= 8; i++) {
@@ -112,10 +108,8 @@
         `);
       }
     </script>
-  </div>
 
-  <div id="instrumentosSoundboard" class="soundboard">
-  <h2>Pifilca</h2>
+    <h2>Pifilca</h2>
     <!-- Generate buttons for Pifilca -->
     <script>
       for (let i = 1; i <= 8; i++) {
@@ -162,21 +156,21 @@
 
     function showInstrumentos() {
       const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      instrumentosSoundboard.style.display = "block";
+      instrumentosSoundboard.style.display = "flex";
       document.getElementById("relatosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
       const relatosSoundboard = document.getElementById("relatosSoundboard");
-      relatosSoundboard.style.display = "block";
+      relatosSoundboard.style.display = "flex";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
       const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-      lenguajeSoundboard.style.display = "block";
+      lenguajeSoundboard.style.display = "flex";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
     }
