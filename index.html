@@ -34,12 +34,14 @@
 
     .soundboard-row {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+      align-items: center;
       margin-bottom: 10px;
     }
 
-    .soundboard-row button {
+    .soundboard button {
       width: 100px;
       height: 100px;
       background-color: #85071f;
@@ -82,7 +84,6 @@
 
   <div id="instrumentosSoundboard" class="soundboard">
     <div class="soundboard-row">
-      <h2>Trutruka</h2>
       <!-- Generate buttons for Trutruka -->
       <script>
         for (let i = 1; i <= 8; i++) {
@@ -96,7 +97,6 @@
     </div>
   
     <div class="soundboard-row">
-      <h2>Wada</h2>
       <!-- Generate buttons for Wada -->
       <script>
         for (let i = 1; i <= 8; i++) {
@@ -110,7 +110,89 @@
     </div>
 
     <div class="soundboard-row">
-      <h2>Pilolay</h2>
       <!-- Generate buttons for Pilolay -->
       <script>
         for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+
+    <div class="soundboard-row">
+      <!-- Generate buttons for Pifilca -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+  </div>
+
+  <div id="relatosSoundboard" class="soundboard">
+    <!-- Generate buttons for Relatos -->
+    <script>
+      for (let i = 1; i <= 10; i++) {
+        document.write(`
+          <button onclick="playSound('Relatos/Relato ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <div id="lenguajeSoundboard" class="soundboard">
+    <!-- Generate buttons for Lenguaje -->
+    <script>
+      for (let i = 1; i <= 20; i++) {
+        document.write(`
+          <button onclick="playSound('Lenguaje/Leng ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <script>
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
+
+    function showInstrumentos() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      instrumentosSoundboard.style.display = "block";
+      document.getElementById("relatosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
+    }
+
+    function showRelatos() {
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      relatosSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
+    }
+
+    function showLenguaje() {
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+      lenguajeSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("relatosSoundboard").style.display = "none";
+    }
+
+    window.onload = function() {
+      showInstrumentos();
+    };
+  </script>
+</body>
+</html>
+
