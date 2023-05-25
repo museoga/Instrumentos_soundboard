@@ -73,6 +73,16 @@
       cursor: pointer;
       font-size: 18px;
     }
+    
+    .rel, .leng {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+      justify-items: center;
+      align-items: center;
+      margin-top: 15%;
+    }
+
   </style>
 </head>
 <body>
@@ -136,7 +146,7 @@
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard">
+  <div id="relatosSoundboard" class="soundboard rel">
     <!-- Generate buttons for Relatos -->
     <script>
       for (let i = 1; i <= 10; i++) {
@@ -149,7 +159,7 @@
     </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard">
+  <div id="lenguajeSoundboard" class="soundboard leng">
     <!-- Generate buttons for Lenguaje -->
     <script>
       for (let i = 1; i <= 20; i++) {
@@ -195,4 +205,5 @@
   </script>
 </body>
 </html>
+
 
