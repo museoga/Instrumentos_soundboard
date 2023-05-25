@@ -11,24 +11,22 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+    
+    h2 {
+      color: #000000;
+      margin-top: 5px 
+      margin-bottom: 5px
+    }
 
     .soundboard {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 15%;
-    }
-
-    .soundboard-row {
-      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
       justify-content: center;
-      gap: 20px;
-      margin-bottom: 20px;
-      align-items: center;
     }
 
-    .soundboard button {
-      width: 200px;
+   .soundboard button {
+      width: 100px;
       height: 100px;
       background-color: #85071f;
       border: none;
@@ -42,23 +40,7 @@
       color: #FFFFFF;
       text-align: center;
     }
-
-    .soundboard.rel {
-      flex-wrap: wrap;
-    }
-
-    .soundboard.rel .soundboard-row {
-      flex-basis: 50%;
-    }
-
-    .soundboard.leng {
-      flex-wrap: wrap;
-    }
-
-    .soundboard.leng .soundboard-row {
-      flex-basis: 25%;
-    }
-
+    
     .header {
       display: flex;
       justify-content: center;
@@ -84,68 +66,70 @@
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
 
+  <h2>Trutruka</h2>
   <div id="instrumentosSoundboard" class="soundboard">
-    <div class="soundboard-row">
-      <!-- Generate buttons for Trutruka -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Trutruka/Tru ${i}.wav')">
-              Trutruka ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <!-- Generate buttons for Wada -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Wada/Wad ${i}.wav')">
-              Wada ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <!-- Generate buttons for Pilolay -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
-              Pilolay ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <!-- Generate buttons for Pifilca -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-              Pifilca ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
+    <!-- Generate buttons for Trutruka -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Trutruka/Tru ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard rel">
-    <div class="soundboard-row">
+  <h2>Wada</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Wada -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Wada/Wad ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pilolay</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pilolay -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <h2>Pifilca</h2>
+  <div class="soundboard">
+    <!-- Generate buttons for Pifilca -->
+    <script>
+      for (let i = 1; i <= 8; i++) {
+        document.write(`
+          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+            ${i}
+          </button>
+        `);
+      }
+    </script>
+  </div>
+
+  <div id="relatosSoundboard" class="soundboard">
+    <div class="soundboard">
       <!-- Generate buttons for Relatos -->
       <script>
         for (let i = 1; i <= 10; i++) {
           document.write(`
             <button onclick="playSound('Relatos/Relato ${i}.wav')">
-              Relato ${i}
+              ${i}
             </button>
           `);
         }
@@ -153,14 +137,14 @@
     </div>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard leng">
-    <div class="soundboard-row">
+  <div id="lenguajeSoundboard" class="soundboard">
+    <div class="soundboard">
       <!-- Generate buttons for Lenguaje -->
       <script>
         for (let i = 1; i <= 20; i++) {
           document.write(`
             <button onclick="playSound('Lenguaje/Leng ${i}.wav')">
-              Lenguaje ${i}
+              ${i}
             </button>
           `);
         }
