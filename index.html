@@ -37,6 +37,7 @@
       justify-content: center;
       gap: 10px;
       margin-bottom: 10px;
+      align-items: center;
     }
 
     .soundboard button {
@@ -50,7 +51,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 10px;
-      font-size: 14px;
+      font-size: 32px;
       color: #FFFFFF;
       text-align: center;
     }
@@ -82,21 +83,22 @@
 
   <div id="instrumentosSoundboard" class="soundboard">
     <div class="soundboard-row">
+      <h2>Trutruka</h2>
       <!-- Generate buttons for Trutruka -->
       <script>
         const trutrukaSounds = [
-          "Trutruka/Tru 1.wav",
-          "Trutruka/Tru 2.wav",
-          "Trutruka/Tru 3.wav",
-          "Trutruka/Tru 4.wav",
-          "Trutruka/Tru 5.wav",
-          "Trutruka/Tru 6.wav",
-          "Trutruka/Tru 7.wav",
-          "Trutruka/Tru 8.wav"
+          "Trutruka/Tru 1",
+          "Trutruka/Tru 2",
+          "Trutruka/Tru 3",
+          "Trutruka/Tru 4",
+          "Trutruka/Tru 5",
+          "Trutruka/Tru 6",
+          "Trutruka/Tru 7",
+          "Trutruka/Tru 8"
         ];
         
-        for (let i = 1; i <= 8; i++) {
-          const soundPath = trutrukaSounds[i - 1];
+        for (let i = 0; i < trutrukaSounds.length; i++) {
+          const soundPath = trutrukaSounds[i];
           const soundName = soundPath.split("/")[1];
           document.write(`
             <button onclick="playSound('${soundPath}')">
@@ -108,21 +110,22 @@
     </div>
   
     <div class="soundboard-row">
+      <h2>Wada</h2>
       <!-- Generate buttons for Wada -->
       <script>
         const wadaSounds = [
-          "Wada/Wad 1.wav",
-          "Wada/Wad 2.wav",
-          "Wada/Wad 3.wav",
-          "Wada/Wad 4.wav",
-          "Wada/Wad 5.wav",
-          "Wada/Wad 6.wav",
-          "Wada/Wad 7.wav",
-          "Wada/Wad 8.wav"
+          "Wada/Wad 1",
+          "Wada/Wad 2",
+          "Wada/Wad 3",
+          "Wada/Wad 4",
+          "Wada/Wad 5",
+          "Wada/Wad 6",
+          "Wada/Wad 7",
+          "Wada/Wad 8"
         ];
-        
-        for (let i = 1; i <= 8; i++) {
-          const soundPath = wadaSounds[i - 1];
+
+        for (let i = 0; i < wadaSounds.length; i++) {
+          const soundPath = wadaSounds[i];
           const soundName = soundPath.split("/")[1];
           document.write(`
             <button onclick="playSound('${soundPath}')">
@@ -134,21 +137,22 @@
     </div>
 
     <div class="soundboard-row">
+      <h2>Pilolay</h2>
       <!-- Generate buttons for Pilolay -->
       <script>
         const pilolaySounds = [
-          "Pilolay/Pil 1.wav",
-          "Pilolay/Pil 2.wav",
-          "Pilolay/Pil 3.wav",
-          "Pilolay/Pil 4.wav",
-          "Pilolay/Pil 5.wav",
-          "Pilolay/Pil 6.wav",
-          "Pilolay/Pil 7.wav",
-          "Pilolay/Pil 8.wav"
+          "Pilolay/Pil 1",
+          "Pilolay/Pil 2",
+          "Pilolay/Pil 3",
+          "Pilolay/Pil 4",
+          "Pilolay/Pil 5",
+          "Pilolay/Pil 6",
+          "Pilolay/Pil 7",
+          "Pilolay/Pil 8"
         ];
-        
-        for (let i = 1; i <= 8; i++) {
-          const soundPath = pilolaySounds[i - 1];
+
+        for (let i = 0; i < pilolaySounds.length; i++) {
+          const soundPath = pilolaySounds[i];
           const soundName = soundPath.split("/")[1];
           document.write(`
             <button onclick="playSound('${soundPath}')">
@@ -160,21 +164,22 @@
     </div>
 
     <div class="soundboard-row">
+      <h2>Pifilca</h2>
       <!-- Generate buttons for Pifilca -->
       <script>
         const pifilcaSounds = [
-          "Pifilca/Pif 1.wav",
-          "Pifilca/Pif 2.wav",
-          "Pifilca/Pif 3.wav",
-          "Pifilca/Pif 4.wav",
-          "Pifilca/Pif 5.wav",
-          "Pifilca/Pif 6.wav",
-          "Pifilca/Pif 7.wav",
-          "Pifilca/Pif 8.wav"
+          "Pifilca/Pif 1",
+          "Pifilca/Pif 2",
+          "Pifilca/Pif 3",
+          "Pifilca/Pif 4",
+          "Pifilca/Pif 5",
+          "Pifilca/Pif 6",
+          "Pifilca/Pif 7",
+          "Pifilca/Pif 8"
         ];
-        
-        for (let i = 1; i <= 8; i++) {
-          const soundPath = pifilcaSounds[i - 1];
+
+        for (let i = 0; i < pifilcaSounds.length; i++) {
+          const soundPath = pifilcaSounds[i];
           const soundName = soundPath.split("/")[1];
           document.write(`
             <button onclick="playSound('${soundPath}')">
@@ -190,20 +195,20 @@
     <!-- Generate buttons for Relatos -->
     <script>
       const relatosSounds = [
-        "Relatos/Relato 1.wav",
-        "Relatos/Relato 2.wav",
-        "Relatos/Relato 3.wav",
-        "Relatos/Relato 4.wav",
-        "Relatos/Relato 5.wav",
-        "Relatos/Relato 6.wav",
-        "Relatos/Relato 7.wav",
-        "Relatos/Relato 8.wav",
-        "Relatos/Relato 9.wav",
-        "Relatos/Relato 10.wav"
+        "Relatos/Relato 1",
+        "Relatos/Relato 2",
+        "Relatos/Relato 3",
+        "Relatos/Relato 4",
+        "Relatos/Relato 5",
+        "Relatos/Relato 6",
+        "Relatos/Relato 7",
+        "Relatos/Relato 8",
+        "Relatos/Relato 9",
+        "Relatos/Relato 10"
       ];
 
-      for (let i = 1; i <= 10; i++) {
-        const soundPath = relatosSounds[i - 1];
+      for (let i = 0; i < relatosSounds.length; i++) {
+        const soundPath = relatosSounds[i];
         const soundName = soundPath.split("/")[1];
         document.write(`
           <button onclick="playSound('${soundPath}')">
@@ -218,30 +223,30 @@
     <!-- Generate buttons for Lenguaje -->
     <script>
       const lenguajeSounds = [
-        "Lenguaje/Leng 1.wav",
-        "Lenguaje/Leng 2.wav",
-        "Lenguaje/Leng 3.wav",
-        "Lenguaje/Leng 4.wav",
-        "Lenguaje/Leng 5.wav",
-        "Lenguaje/Leng 6.wav",
-        "Lenguaje/Leng 7.wav",
-        "Lenguaje/Leng 8.wav",
-        "Lenguaje/Leng 9.wav",
-        "Lenguaje/Leng 10.wav",
-        "Lenguaje/Leng 11.wav",
-        "Lenguaje/Leng 12.wav",
-        "Lenguaje/Leng 13.wav",
-        "Lenguaje/Leng 14.wav",
-        "Lenguaje/Leng 15.wav",
-        "Lenguaje/Leng 16.wav",
-        "Lenguaje/Leng 17.wav",
-        "Lenguaje/Leng 18.wav",
-        "Lenguaje/Leng 19.wav",
-        "Lenguaje/Leng 20.wav"
+        "Lenguaje/Leng 1",
+        "Lenguaje/Leng 2",
+        "Lenguaje/Leng 3",
+        "Lenguaje/Leng 4",
+        "Lenguaje/Leng 5",
+        "Lenguaje/Leng 6",
+        "Lenguaje/Leng 7",
+        "Lenguaje/Leng 8",
+        "Lenguaje/Leng 9",
+        "Lenguaje/Leng 10",
+        "Lenguaje/Leng 11",
+        "Lenguaje/Leng 12",
+        "Lenguaje/Leng 13",
+        "Lenguaje/Leng 14",
+        "Lenguaje/Leng 15",
+        "Lenguaje/Leng 16",
+        "Lenguaje/Leng 17",
+        "Lenguaje/Leng 18",
+        "Lenguaje/Leng 19",
+        "Lenguaje/Leng 20"
       ];
 
-      for (let i = 1; i <= 20; i++) {
-        const soundPath = lenguajeSounds[i - 1];
+      for (let i = 0; i < lenguajeSounds.length; i++) {
+        const soundPath = lenguajeSounds[i];
         const soundName = soundPath.split("/")[1];
         document.write(`
           <button onclick="playSound('${soundPath}')">
@@ -259,21 +264,24 @@
     }
 
     function showInstrumentos() {
-      document.getElementById("instrumentosSoundboard").style.display = "grid";
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      instrumentosSoundboard.style.display = "grid";
       document.getElementById("relatosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      relatosSoundboard.style.display = "grid";
       document.getElementById("instrumentosSoundboard").style.display = "none";
-      document.getElementById("relatosSoundboard").style.display = "grid";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+      lenguajeSoundboard.style.display = "grid";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
-      document.getElementById("lenguajeSoundboard").style.display = "grid";
     }
 
     window.onload = function() {
