@@ -34,10 +34,8 @@
 
     .soundboard-row {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      align-items: center;
       margin-bottom: 10px;
     }
 
@@ -52,7 +50,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 10px;
-      font-size: 32px;
+      font-size: 14px;
       color: #FFFFFF;
       text-align: center;
     }
@@ -73,16 +71,6 @@
       cursor: pointer;
       font-size: 18px;
     }
-    
-    .rel, .leng {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-      gap: 10px;
-      justify-items: center;
-      align-items: center;
-      margin-top: 15%;
-    }
-
   </style>
 </head>
 <body>
@@ -96,10 +84,23 @@
     <div class="soundboard-row">
       <!-- Generate buttons for Trutruka -->
       <script>
+        const trutrukaSounds = [
+          "Trutruka/Tru 1.wav",
+          "Trutruka/Tru 2.wav",
+          "Trutruka/Tru 3.wav",
+          "Trutruka/Tru 4.wav",
+          "Trutruka/Tru 5.wav",
+          "Trutruka/Tru 6.wav",
+          "Trutruka/Tru 7.wav",
+          "Trutruka/Tru 8.wav"
+        ];
+        
         for (let i = 1; i <= 8; i++) {
+          const soundPath = trutrukaSounds[i - 1];
+          const soundName = soundPath.split("/")[1];
           document.write(`
-            <button onclick="playSound('Trutruka/Tru ${i}.wav')">
-              ${i}
+            <button onclick="playSound('${soundPath}')">
+              ${soundName}
             </button>
           `);
         }
@@ -109,10 +110,23 @@
     <div class="soundboard-row">
       <!-- Generate buttons for Wada -->
       <script>
+        const wadaSounds = [
+          "Wada/Wad 1.wav",
+          "Wada/Wad 2.wav",
+          "Wada/Wad 3.wav",
+          "Wada/Wad 4.wav",
+          "Wada/Wad 5.wav",
+          "Wada/Wad 6.wav",
+          "Wada/Wad 7.wav",
+          "Wada/Wad 8.wav"
+        ];
+        
         for (let i = 1; i <= 8; i++) {
+          const soundPath = wadaSounds[i - 1];
+          const soundName = soundPath.split("/")[1];
           document.write(`
-            <button onclick="playSound('Wada/Wad ${i}.wav')">
-              ${i}
+            <button onclick="playSound('${soundPath}')">
+              ${soundName}
             </button>
           `);
         }
@@ -122,10 +136,23 @@
     <div class="soundboard-row">
       <!-- Generate buttons for Pilolay -->
       <script>
+        const pilolaySounds = [
+          "Pilolay/Pil 1.wav",
+          "Pilolay/Pil 2.wav",
+          "Pilolay/Pil 3.wav",
+          "Pilolay/Pil 4.wav",
+          "Pilolay/Pil 5.wav",
+          "Pilolay/Pil 6.wav",
+          "Pilolay/Pil 7.wav",
+          "Pilolay/Pil 8.wav"
+        ];
+        
         for (let i = 1; i <= 8; i++) {
+          const soundPath = pilolaySounds[i - 1];
+          const soundName = soundPath.split("/")[1];
           document.write(`
-            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
-              ${i}
+            <button onclick="playSound('${soundPath}')">
+              ${soundName}
             </button>
           `);
         }
@@ -135,10 +162,23 @@
     <div class="soundboard-row">
       <!-- Generate buttons for Pifilca -->
       <script>
+        const pifilcaSounds = [
+          "Pifilca/Pif 1.wav",
+          "Pifilca/Pif 2.wav",
+          "Pifilca/Pif 3.wav",
+          "Pifilca/Pif 4.wav",
+          "Pifilca/Pif 5.wav",
+          "Pifilca/Pif 6.wav",
+          "Pifilca/Pif 7.wav",
+          "Pifilca/Pif 8.wav"
+        ];
+        
         for (let i = 1; i <= 8; i++) {
+          const soundPath = pifilcaSounds[i - 1];
+          const soundName = soundPath.split("/")[1];
           document.write(`
-            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-              ${i}
+            <button onclick="playSound('${soundPath}')">
+              ${soundName}
             </button>
           `);
         }
@@ -146,26 +186,66 @@
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard rel">
+  <div id="relatosSoundboard" class="soundboard">
     <!-- Generate buttons for Relatos -->
     <script>
+      const relatosSounds = [
+        "Relatos/Relato 1.wav",
+        "Relatos/Relato 2.wav",
+        "Relatos/Relato 3.wav",
+        "Relatos/Relato 4.wav",
+        "Relatos/Relato 5.wav",
+        "Relatos/Relato 6.wav",
+        "Relatos/Relato 7.wav",
+        "Relatos/Relato 8.wav",
+        "Relatos/Relato 9.wav",
+        "Relatos/Relato 10.wav"
+      ];
+
       for (let i = 1; i <= 10; i++) {
+        const soundPath = relatosSounds[i - 1];
+        const soundName = soundPath.split("/")[1];
         document.write(`
-          <button onclick="playSound('Relatos/Relato ${i}.wav')">
-            ${i}
+          <button onclick="playSound('${soundPath}')">
+            ${soundName}
           </button>
         `);
       }
     </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard leng">
+  <div id="lenguajeSoundboard" class="soundboard">
     <!-- Generate buttons for Lenguaje -->
     <script>
+      const lenguajeSounds = [
+        "Lenguaje/Leng 1.wav",
+        "Lenguaje/Leng 2.wav",
+        "Lenguaje/Leng 3.wav",
+        "Lenguaje/Leng 4.wav",
+        "Lenguaje/Leng 5.wav",
+        "Lenguaje/Leng 6.wav",
+        "Lenguaje/Leng 7.wav",
+        "Lenguaje/Leng 8.wav",
+        "Lenguaje/Leng 9.wav",
+        "Lenguaje/Leng 10.wav",
+        "Lenguaje/Leng 11.wav",
+        "Lenguaje/Leng 12.wav",
+        "Lenguaje/Leng 13.wav",
+        "Lenguaje/Leng 14.wav",
+        "Lenguaje/Leng 15.wav",
+        "Lenguaje/Leng 16.wav",
+        "Lenguaje/Leng 17.wav",
+        "Lenguaje/Leng 18.wav",
+        "Lenguaje/Leng 19.wav",
+        "Lenguaje/Leng 20.wav"
+      ];
+
       for (let i = 1; i <= 20; i++) {
+        const soundPath = lenguajeSounds[i - 1];
+        const soundName = soundPath.split("/")[1];
         document.write(`
-          <button onclick="playSound('Lenguaje/Leng ${i}.wav')">
-            ${i}
+          <button onclick="playSound('${soundPath}')">
+            ${soundName}
           </button>
         `);
       }
@@ -179,24 +259,21 @@
     }
 
     function showInstrumentos() {
-      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      instrumentosSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "grid";
       document.getElementById("relatosSoundboard").style.display = "none";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
-      const relatosSoundboard = document.getElementById("relatosSoundboard");
-      relatosSoundboard.style.display = "block";
       document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("relatosSoundboard").style.display = "grid";
       document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
-      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-      lenguajeSoundboard.style.display = "block";
       document.getElementById("instrumentosSoundboard").style.display = "none";
       document.getElementById("relatosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "grid";
     }
 
     window.onload = function() {
@@ -205,5 +282,3 @@
   </script>
 </body>
 </html>
-
-
