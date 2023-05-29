@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Instrumentos</title>
   <style>
     body {
       background-image: url('Images/background.png');
@@ -10,6 +11,11 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
+
+    h1 {
+      color: #000000;
+      margin-top: 17%;
+    }
     
     h2 {
       color: #000000;
@@ -18,20 +24,28 @@
     }
 
     .soundboard {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+    }
+
+    .soundboard-row {
       display: flex;
       justify-content: center;
       gap: 10px;
-      margin-top: 15%;
+      margin-bottom: 10px;
+      align-items: center;
     }
 
-   .soundboard button {
+    .soundboard button {
       width: 100px;
       height: 100px;
       background-color: #85071f;
       border: none;
       cursor: pointer;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       border-radius: 10px;
@@ -39,7 +53,7 @@
       color: #FFFFFF;
       text-align: center;
     }
-    
+
     .header {
       display: flex;
       justify-content: center;
@@ -65,63 +79,65 @@
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
 
-  <h2>Trutruka</h2>
   <div id="instrumentosSoundboard" class="soundboard">
-    <!-- Generate buttons for Trutruka -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Trutruka/Tru ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
+    <div class="soundboard-row">
+      <h2>Trutruka</h2>
+      <!-- Generate buttons for Trutruka -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Trutruka/Tru ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+  
+    <div class="soundboard-row">
+      <h2>Wada</h2>
+      <!-- Generate buttons for Wada -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Wada/Wad ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+
+    <div class="soundboard-row">
+      <h2>Pilolay</h2>
+      <!-- Generate buttons for Pilolay -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
+
+    <div class="soundboard-row">
+      <h2>Pifilca</h2>
+      <!-- Generate buttons for Pifilca -->
+      <script>
+        for (let i = 1; i <= 8; i++) {
+          document.write(`
+            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
+              ${i}
+            </button>
+          `);
+        }
+      </script>
+    </div>
   </div>
 
-  <h2>Wada</h2>
-  <div id="instrumentosSoundboard" class="soundboard">
-    <!-- Generate buttons for Wada -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Wada/Wad ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
-  </div>
-
-  <h2>Pilolay</h2>
-  <div id="instrumentosSoundboard" class="soundboard">
-    <!-- Generate buttons for Pilolay -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Pilolay/Pil ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
-  </div>
-
-  <h2>Pifilca</h2>
-  <div id="instrumentosSoundboard" class="soundboard">
-    <!-- Generate buttons for Pifilca -->
-    <script>
-      for (let i = 1; i <= 8; i++) {
-        document.write(`
-          <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-            ${i}
-          </button>
-        `);
-      }
-    </script>
-  </div>
-
-  <div id="relatosSoundboard" class="soundboard" style="display: none;">
+  <div id="relatosSoundboard" class="soundboard">
     <!-- Generate buttons for Relatos -->
     <script>
       for (let i = 1; i <= 10; i++) {
@@ -134,7 +150,7 @@
     </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard" style="display: none;">
+  <div id="lenguajeSoundboard" class="soundboard">
     <!-- Generate buttons for Lenguaje -->
     <script>
       for (let i = 1; i <= 20; i++) {
@@ -154,35 +170,34 @@
     }
 
     function showInstrumentos() {
-  const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-  const relatosSoundboard = document.getElementById("relatosSoundboard");
-  const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
 
-  instrumentosSoundboard.style.display = "grid";
-  relatosSoundboard.style.display = "none";
-  lenguajeSoundboard.style.display = "none";
-}
+      instrumentosSoundboard.style.display = "block";
+      relatosSoundboard.style.display = "none";
+      lenguajeSoundboard.style.display = "none";
+    }
 
-function showRelatos() {
-  const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-  const relatosSoundboard = document.getElementById("relatosSoundboard");
-  const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+    function showRelatos() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
 
-  instrumentosSoundboard.style.display = "none";
-  relatosSoundboard.style.display = "grid";
-  lenguajeSoundboard.style.display = "none";
-}
+      instrumentosSoundboard.style.display = "none";
+      relatosSoundboard.style.display = "block";
+      lenguajeSoundboard.style.display = "none";
+    }
 
-function showLenguaje() {
-  const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-  const relatosSoundboard = document.getElementById("relatosSoundboard");
-  const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+    function showLenguaje() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
 
-  instrumentosSoundboard.style.display = "none";
-  relatosSoundboard.style.display = "none";
-  lenguajeSoundboard.style.display = "grid";
-}
-
+      instrumentosSoundboard.style.display = "none";
+      relatosSoundboard.style.display = "none";
+      lenguajeSoundboard.style.display = "block";
+    }
 
     window.onload = function() {
       showInstrumentos();
@@ -190,4 +205,5 @@ function showLenguaje() {
   </script>
 </body>
 </html>
+
 
