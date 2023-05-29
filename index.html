@@ -16,7 +16,7 @@
       color: #000000;
       margin-top: 17%;
     }
-
+    
     h2 {
       color: #000000;
       margin-top: 5px;
@@ -24,15 +24,15 @@
     }
 
     .soundboard {
-      display: flex;
-      flex-direction: column;
+      display: none;
+      justify-content: center;
       align-items: center;
-      margin-top: 15%;
+      margin-top: 15px;
     }
 
-    .soundboard-row {
-      display: flex;
-      justify-content: center;
+    .soundboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 10px;
       margin-bottom: 10px;
       align-items: center;
@@ -52,22 +52,6 @@
       font-size: 32px;
       color: #FFFFFF;
       text-align: center;
-    }
-
-    .soundboard.rel {
-      flex-wrap: wrap;
-    }
-
-    .soundboard.rel .soundboard-row {
-      flex-basis: 50%;
-    }
-
-    .soundboard.leng {
-      flex-wrap: wrap;
-    }
-
-    .soundboard.leng .soundboard-row {
-      flex-basis: 25%;
     }
 
     .header {
@@ -96,56 +80,13 @@
   </div>
 
   <div id="instrumentosSoundboard" class="soundboard">
-    <div class="soundboard-row">
-      <h2>Trutruka</h2>
+    <div class="soundboard-grid">
       <!-- Generate buttons for Trutruka -->
       <script>
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i <= 32; i++) {
           document.write(`
-            <button onclick="playSound('Trutruka/Tru ${i}.wav')">
-              Trutruka ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <h2>Wada</h2>
-      <!-- Generate buttons for Wada -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Wada/Wad ${i}.wav')">
-              Wada ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <h2>Pilolay</h2>
-      <!-- Generate buttons for Pilolay -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Pilolay/Pil ${i}.wav')">
-              Pilolay ${i}
-            </button>
-          `);
-        }
-      </script>
-    </div>
-
-    <div class="soundboard-row">
-      <h2>Pifilca</h2>
-      <!-- Generate buttons for Pifilca -->
-      <script>
-        for (let i = 1; i <= 8; i++) {
-          document.write(`
-            <button onclick="playSound('Pifilca/Pif ${i}.wav')">
-              Pifilca ${i}
+            <button onclick="playSound('Instrumentos/Trutruka/Tru ${i}.wav')">
+              ${i}
             </button>
           `);
         }
@@ -153,15 +94,14 @@
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="soundboard rel">
-    <div class="soundboard-row">
-      <h2>Relatos</h2>
+  <div id="relatosSoundboard" class="soundboard">
+    <div class="soundboard-grid">
       <!-- Generate buttons for Relatos -->
       <script>
         for (let i = 1; i <= 10; i++) {
           document.write(`
             <button onclick="playSound('Relatos/Relato ${i}.wav')">
-              Relato ${i}
+              ${i}
             </button>
           `);
         }
@@ -169,15 +109,14 @@
     </div>
   </div>
 
-  <div id="lenguajeSoundboard" class="soundboard leng">
-    <div class="soundboard-row">
-      <h2>Lenguaje</h2>
+  <div id="lenguajeSoundboard" class="soundboard">
+    <div class="soundboard-grid">
       <!-- Generate buttons for Lenguaje -->
       <script>
         for (let i = 1; i <= 20; i++) {
           document.write(`
             <button onclick="playSound('Lenguaje/Leng ${i}.wav')">
-              Lenguaje ${i}
+              ${i}
             </button>
           `);
         }
@@ -193,23 +132,32 @@
 
     function showInstrumentos() {
       const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+
       instrumentosSoundboard.style.display = "block";
-      document.getElementById("relatosSoundboard").style.display = "none";
-      document.getElementById("lenguajeSoundboard").style.display = "none";
+      relatosSoundboard.style.display = "none";
+      lenguajeSoundboard.style.display = "none";
     }
 
     function showRelatos() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
       const relatosSoundboard = document.getElementById("relatosSoundboard");
+      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+
+      instrumentosSoundboard.style.display = "none";
       relatosSoundboard.style.display = "block";
-      document.getElementById("instrumentosSoundboard").style.display = "none";
-      document.getElementById("lenguajeSoundboard").style.display = "none";
+      lenguajeSoundboard.style.display = "none";
     }
 
     function showLenguaje() {
+      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
+      const relatosSoundboard = document.getElementById("relatosSoundboard");
       const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
+
+      instrumentosSoundboard.style.display = "none";
+      relatosSoundboard.style.display = "none";
       lenguajeSoundboard.style.display = "block";
-      document.getElementById("instrumentosSoundboard").style.display = "none";
-      document.getElementById("relatosSoundboard").style.display = "none";
     }
 
     window.onload = function() {
@@ -218,4 +166,3 @@
   </script>
 </body>
 </html>
-
