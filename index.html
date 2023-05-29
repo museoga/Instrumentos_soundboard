@@ -11,18 +11,7 @@
       font-family: Arial, sans-serif;
       text-align: center;
     }
-
-    h1 {
-      color: #000000;
-      margin-top: 17%;
-    }
     
-    h2 {
-      color: #000000;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
     .soundboard {
       display: none;
       justify-content: center;
@@ -32,7 +21,8 @@
 
     .soundboard-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: minmax(100px, auto);
       gap: 10px;
       margin-bottom: 10px;
       align-items: center;
