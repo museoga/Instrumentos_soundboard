@@ -17,92 +17,104 @@
       margin-top: 17%;
     }
 
-    .menu-container {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      margin-top: 15px;
+    h2 {
+      color: #000000;
+      margin-top: 5px;
+      margin-bottom: 5px;
     }
 
-    .button-container {
+    .soundboard {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 10px;
-      margin-bottom: 10px;
+      justify-items: center;
       align-items: center;
+      margin-top: 15%;
     }
 
-    .button-container a {
-      display: flex;
-      justify-content: center;
+    .soundboard.rel,
+    .soundboard.leng {
+      display: grid;
+      gap: 10px;
+      justify-items: center;
       align-items: center;
-      width: 100px;
-      height: 100px;
-      background-color: #85071f;
-      border: none;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 24px;
-      color: #FFFFFF;
-      text-decoration: none;
+      margin-top: 15%;
     }
 
-    .header {
+    .menu-container {
       display: flex;
       justify-content: center;
       margin-bottom: 20px;
     }
 
-    .header button {
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .button-container a {
       margin: 0 10px;
       background-color: #333333;
       color: #FFFFFF;
-      border: none;
-      border-radius: 5px;
+      text-decoration: none;
       padding: 5px 10px;
-      cursor: pointer;
+      border-radius: 5px;
       font-size: 18px;
     }
   </style>
 </head>
 <body>
-  <div class="header">
-    <button onclick="showInstrumentos()">Instrumentos</button>
-    <button onclick="showRelatos()">Relatos</button>
-    <button onclick="showLenguaje()">Lenguaje</button>
-  </div>
-
-  <div id="instrumentosSoundboard" class="menu-container">
+  <div class="menu-container">
     <div class="button-container">
-      <a href="#/Trutruka1" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 1.wav')">Trutruka 1</a>
-      <a href="#/Trutruka2" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 2.wav')">Trutruka 2</a>
-      <a href="#/Trutruka3" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 3.wav')">Trutruka 3</a>
-      <a href="#/Trutruka4" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 4.wav')">Trutruka 4</a>
-      <a href="#/Trutruka5" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 5.wav')">Trutruka 5</a>
-      <a href="#/Trutruka6" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 6.wav')">Trutruka 6</a>
-      <a href="#/Trutruka7" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 7.wav')">Trutruka 7</a>
-      <a href="#/Trutruka8" class="button" onclick="playSound('Instrumentos/Trutruka/Tru 8.wav')">Trutruka 8</a>
+      <a href="#/instrumentos" onclick="showInstrumentos()" class="button">Instrumentos</a>
+      <a href="#/relatos" onclick="showRelatos()" class="button">Relatos</a>
+      <a href="#/lenguaje" onclick="showLenguaje()" class="button">Lenguaje</a>
     </div>
   </div>
 
-  <div id="relatosSoundboard" class="menu-container">
-    <div class="button-container">
-      <a href="#/Relato1" class="button" onclick="playSound('Relatos/Rel 1.wav')">Relato 1</a>
-      <a href="#/Relato2" class="button" onclick="playSound('Relatos/Rel 2.wav')">Relato 2</a>
-      <a href="#/Relato3" class="button" onclick="playSound('Relatos/Rel 3.wav')">Relato 3</a>
-      <a href="#/Relato4" class="button" onclick="playSound('Relatos/Rel 4.wav')">Relato 4</a>
-      <a href="#/Relato5" class="button" onclick="playSound('Relatos/Rel 5.wav')">Relato 5</a>
-    </div>
+  <div id="instrumentosSoundboard" class="soundboard">
+    <!-- Generate buttons for Instrumentos -->
+    <script>
+      for (let i = 1; i <= 4; i++) {
+        for (let j = 1; j <= 8; j++) {
+          const instrument = ['Trutruka', 'Wada', 'Pilolay', 'Pifilca'][i - 1];
+          document.write(`
+            <button onclick="playSound('${instrument}/${instrument} ${j}.wav')">
+              ${instrument} ${j}
+            </button>
+          `);
+        }
+      }
+    </script>
   </div>
 
-  <div id="lenguajeSoundboard" class="menu-container">
-    <div class="button-container">
-      <a href="#/Lenguaje1" class="button" onclick="playSound('Lenguaje/Leng 1.wav')">Lenguaje 1</a>
-      <a href="#/Lenguaje2" class="button" onclick="playSound('Lenguaje/Leng 2.wav')">Lenguaje 2</a>
-      <a href="#/Lenguaje3" class="button" onclick="playSound('Lenguaje/Leng 3.wav')">Lenguaje 3</a>
-      <a href="#/Lenguaje4" class="button" onclick="playSound('Lenguaje/Leng 4.wav')">Lenguaje 4</a>
-      <a href="#/Lenguaje5" class="button" onclick="playSound('Lenguaje/Leng 5.wav')">Lenguaje 5</a>
-    </div>
+  <div id="relatosSoundboard" class="soundboard rel">
+    <!-- Generate buttons for Relatos -->
+    <script>
+      for (let i = 1; i <= 2; i++) {
+        for (let j = 1; j <= 5; j++) {
+          document.write(`
+            <button onclick="playSound('Relatos/Relato ${i * j}.wav')">
+              Relato ${i * j}
+            </button>
+          `);
+        }
+      }
+    </script>
+  </div>
+
+  <div id="lenguajeSoundboard" class="soundboard leng">
+    <!-- Generate buttons for Lenguaje -->
+    <script>
+      for (let i = 1; i <= 4; i++) {
+        for (let j = 1; j <= 5; j++) {
+          document.write(`
+            <button onclick="playSound('Lenguaje/Leng ${i * j}.wav')">
+              Leng ${i * j}
+            </button>
+          `);
+        }
+      }
+    </script>
   </div>
 
   <script>
@@ -112,37 +124,24 @@
     }
 
     function showInstrumentos() {
-      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      const relatosSoundboard = document.getElementById("relatosSoundboard");
-      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-
-      instrumentosSoundboard.style.display = "block";
-      relatosSoundboard.style.display = "none";
-      lenguajeSoundboard.style.display = "none";
+      document.getElementById("instrumentosSoundboard").style.display = "grid";
+      document.getElementById("relatosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showRelatos() {
-      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      const relatosSoundboard = document.getElementById("relatosSoundboard");
-      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-
-      instrumentosSoundboard.style.display = "none";
-      relatosSoundboard.style.display = "block";
-      lenguajeSoundboard.style.display = "none";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("relatosSoundboard").style.display = "grid";
+      document.getElementById("lenguajeSoundboard").style.display = "none";
     }
 
     function showLenguaje() {
-      const instrumentosSoundboard = document.getElementById("instrumentosSoundboard");
-      const relatosSoundboard = document.getElementById("relatosSoundboard");
-      const lenguajeSoundboard = document.getElementById("lenguajeSoundboard");
-
-      instrumentosSoundboard.style.display = "none";
-      relatosSoundboard.style.display = "none";
-      lenguajeSoundboard.style.display = "block";
+      document.getElementById("instrumentosSoundboard").style.display = "none";
+      document.getElementById("relatosSoundboard").style.display = "none";
+      document.getElementById("lenguajeSoundboard").style.display = "grid";
     }
 
     window.onload = showInstrumentos;
   </script>
 </body>
 </html>
-
