@@ -42,6 +42,22 @@
       color: #85071f;
     }
     
+    .button-trutruka {
+      background-color: #2874A6; /* Change this to the desired color for Trutruka buttons */
+    }
+    
+    .button-wada {
+      background-color: #B7950B; /* Change this to the desired color for Trutruka buttons */
+    }
+    
+    .button-pifilca {
+      background-color: #6C3483; /* Change this to the desired color for Trutruka buttons */
+    }
+    
+    .button-pilolay {
+      background-color: #AF601A; /* Change this to the desired color for Trutruka buttons */
+    }
+    
     .header {
       display: flex;
       gap: 40px;
@@ -76,13 +92,13 @@
     }
 
     #relatosSoundboard .button-container {
-      grid-template-rows: repeat(2, 1fr);
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     #lenguajeSoundboard .button-container {
-      grid-template-rows: repeat(4, 1fr);
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
     }
   </style>
 </head>
@@ -95,38 +111,38 @@
 
   <div id="instrumentosSoundboard" class="menu-container">
     <div class="button-container">
-      <a href="#/Trutruka1" class="button" onclick="playSound('Trutruka/Tru 1.wav')">Trutruka 1</a>
-      <a href="#/Trutruka2" class="button" onclick="playSound('Trutruka/Tru 2.wav')">Trutruka 2</a>
-      <a href="#/Trutruka3" class="button" onclick="playSound('Trutruka/Tru 3.wav')">Trutruka 3</a>
-      <a href="#/Trutruka4" class="button" onclick="playSound('Trutruka/Tru 4.wav')">Trutruka 4</a>
-      <a href="#/Trutruka5" class="button" onclick="playSound('Trutruka/Tru 5.wav')">Trutruka 5</a>
-      <a href="#/Trutruka6" class="button" onclick="playSound('Trutruka/Tru 6.wav')">Trutruka 6</a>
-      <a href="#/Trutruka7" class="button" onclick="playSound('Trutruka/Tru 7.wav')">Trutruka 7</a>
-      <a href="#/Trutruka8" class="button" onclick="playSound('Trutruka/Tru 8.wav')">Trutruka 8</a>
-      <a href="#/Wada1" class="button" onclick="playSound('Wada/Wad 1.wav')">Wada 1</a>
-      <a href="#/Wada2" class="button" onclick="playSound('Wada/Wad 2.wav')">Wada 2</a>
-      <a href="#/Wada3" class="button" onclick="playSound('Wada/Wad 3.wav')">Wada 3</a>
-      <a href="#/Wada4" class="button" onclick="playSound('Wada/Wad 4.wav')">Wada 4</a>
-      <a href="#/Wada5" class="button" onclick="playSound('Wada/Wad 5.wav')">Wada 5</a>
-      <a href="#/Wada6" class="button" onclick="playSound('Wada/Wad 6.wav')">Wada 6</a>
-      <a href="#/Wada7" class="button" onclick="playSound('Wada/Wad 7.wav')">Wada 7</a>
-      <a href="#/Wada8" class="button" onclick="playSound('Wada/Wad 8.wav')">Wada 8</a>
-      <a href="#/Pilolay1" class="button" onclick="playSound('Pilolay/Pil 1.wav')">Pilolay 1</a>
-      <a href="#/Pilolay2" class="button" onclick="playSound('Pilolay/Pil 2.wav')">Pilolay 2</a>
-      <a href="#/Pilolay3" class="button" onclick="playSound('Pilolay/Pil 3.wav')">Pilolay 3</a>
-      <a href="#/Pilolay4" class="button" onclick="playSound('Pilolay/Pil 4.wav')">Pilolay 4</a>
-      <a href="#/Pilolay5" class="button" onclick="playSound('Pilolay/Pil 5.wav')">Pilolay 5</a>
-      <a href="#/Pilolay6" class="button" onclick="playSound('Pilolay/Pil 6.wav')">Pilolay 6</a>
-      <a href="#/Pilolay7" class="button" onclick="playSound('Pilolay/Pil 7.wav')">Pilolay 7</a>
-      <a href="#/Pilolay8" class="button" onclick="playSound('Pilolay/Pil 8.wav')">Pilolay 8</a>
-      <a href="#/Pifilca1" class="button" onclick="playSound('Pifilca/Pif 1.wav')">Pifilca 1</a>
-      <a href="#/Pifilca2" class="button" onclick="playSound('Pifilca/Pif 2.wav')">Pifilca 2</a>
-      <a href="#/Pifilca3" class="button" onclick="playSound('Pifilca/Pif 3.wav')">Pifilca 3</a>
-      <a href="#/Pifilca4" class="button" onclick="playSound('Pifilca/Pif 4.wav')">Pifilca 4</a>
-      <a href="#/Pifilca5" class="button" onclick="playSound('Pifilca/Pif 5.wav')">Pifilca 5</a>
-      <a href="#/Pifilca6" class="button" onclick="playSound('Pifilca/Pif 6.wav')">Pifilca 6</a>
-      <a href="#/Pifilca7" class="button" onclick="playSound('Pifilca/Pif 7.wav')">Pifilca 7</a>
-      <a href="#/Pifilca8" class="button" onclick="playSound('Pifilca/Pif 8.wav')">Pifilca 8</a>
+      <a href="#/Trutruka1" class="button button-trutruka" onclick="playSound('Trutruka/Tru 1.wav')">Trutruka 1</a>
+      <a href="#/Trutruka2" class="button button-trutruka" onclick="playSound('Trutruka/Tru 2.wav')">Trutruka 2</a>
+      <a href="#/Trutruka3" class="button button-trutruka" onclick="playSound('Trutruka/Tru 3.wav')">Trutruka 3</a>
+      <a href="#/Trutruka4" class="button button-trutruka" onclick="playSound('Trutruka/Tru 4.wav')">Trutruka 4</a>
+      <a href="#/Trutruka5" class="button button-trutruka" onclick="playSound('Trutruka/Tru 5.wav')">Trutruka 5</a>
+      <a href="#/Trutruka6" class="button button-trutruka" onclick="playSound('Trutruka/Tru 6.wav')">Trutruka 6</a>
+      <a href="#/Trutruka7" class="button button-trutruka" onclick="playSound('Trutruka/Tru 7.wav')">Trutruka 7</a>
+      <a href="#/Trutruka8" class="button button-trutruka" onclick="playSound('Trutruka/Tru 8.wav')">Trutruka 8</a>
+      <a href="#/Wada1" class="button button-wada" onclick="playSound('Wada/Wad 1.wav')">Wada 1</a>
+      <a href="#/Wada2" class="button button-wada" onclick="playSound('Wada/Wad 2.wav')">Wada 2</a>
+      <a href="#/Wada3" class="button button-wada" onclick="playSound('Wada/Wad 3.wav')">Wada 3</a>
+      <a href="#/Wada4" class="button button-wada" onclick="playSound('Wada/Wad 4.wav')">Wada 4</a>
+      <a href="#/Wada5" class="button button-wada" onclick="playSound('Wada/Wad 5.wav')">Wada 5</a>
+      <a href="#/Wada6" class="button button-wada" onclick="playSound('Wada/Wad 6.wav')">Wada 6</a>
+      <a href="#/Wada7" class="button button-wada" onclick="playSound('Wada/Wad 7.wav')">Wada 7</a>
+      <a href="#/Wada8" class="button button-wada" onclick="playSound('Wada/Wad 8.wav')">Wada 8</a>
+      <a href="#/Pilolay1" class="button button-pilolay" onclick="playSound('Pilolay/Pil 1.wav')">Pilolay 1</a>
+      <a href="#/Pilolay2" class="button button-pilolay" onclick="playSound('Pilolay/Pil 2.wav')">Pilolay 2</a>
+      <a href="#/Pilolay3" class="button button-pilolay" onclick="playSound('Pilolay/Pil 3.wav')">Pilolay 3</a>
+      <a href="#/Pilolay4" class="button button-pilolay" onclick="playSound('Pilolay/Pil 4.wav')">Pilolay 4</a>
+      <a href="#/Pilolay5" class="button button-pilolay" onclick="playSound('Pilolay/Pil 5.wav')">Pilolay 5</a>
+      <a href="#/Pilolay6" class="button button-pilolay" onclick="playSound('Pilolay/Pil 6.wav')">Pilolay 6</a>
+      <a href="#/Pilolay7" class="button button-pilolay" onclick="playSound('Pilolay/Pil 7.wav')">Pilolay 7</a>
+      <a href="#/Pilolay8" class="button button-pilolay" onclick="playSound('Pilolay/Pil 8.wav')">Pilolay 8</a>
+      <a href="#/Pifilca1" class="button button-pifilca" onclick="playSound('Pifilca/Pif 1.wav')">Pifilca 1</a>
+      <a href="#/Pifilca2" class="button button-pifilca" onclick="playSound('Pifilca/Pif 2.wav')">Pifilca 2</a>
+      <a href="#/Pifilca3" class="button button-pifilca" onclick="playSound('Pifilca/Pif 3.wav')">Pifilca 3</a>
+      <a href="#/Pifilca4" class="button button-pifilca" onclick="playSound('Pifilca/Pif 4.wav')">Pifilca 4</a>
+      <a href="#/Pifilca5" class="button button-pifilca" onclick="playSound('Pifilca/Pif 5.wav')">Pifilca 5</a>
+      <a href="#/Pifilca6" class="button button-pifilca" onclick="playSound('Pifilca/Pif 6.wav')">Pifilca 6</a>
+      <a href="#/Pifilca7" class="button button-pifilca" onclick="playSound('Pifilca/Pif 7.wav')">Pifilca 7</a>
+      <a href="#/Pifilca8" class="button button-pifilca" onclick="playSound('Pifilca/Pif 8.wav')">Pifilca 8</a>
     </div>
   </div>
 
