@@ -12,7 +12,25 @@
       text-align: center;
     }
 
-    .button-container {
+    .instrumentos-container {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10%;
+      margin-bottom: 10px;
+    }
+    
+    .relatos-container {
+      display: grid;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10%;
+      margin-bottom: 10px;
+    }
+    
+    .lenguaje-container {
       display: grid;
       gap: 20px;
       align-items: center;
@@ -35,41 +53,61 @@
       text-decoration: none;
       margin: auto;
     }
-
+    
     .button-blue {
       background-color: #2874A6; /* Change this to the desired color for Trutruka buttons */
     }
-
+    
     .button-yellow {
       background-color: #B7950B; /* Change this to the desired color for Trutruka buttons */
     }
-
+    
     .button-green {
       background-color: #239B56; /* Change this to the desired color for Trutruka buttons */
     }
-
+    
     .button-purple {
       background-color: #6C3483; /* Change this to the desired color for Trutruka buttons */
     }
-
+    
     .button-orange {
       background-color: #AF601A; /* Change this to the desired color for Trutruka buttons */
     }
-
+    
     .button-red {
       background-color: #B03A2E; /* Change this to the desired color for Trutruka buttons */
     }
-
-    .button-blue:active,
-    .button-yellow:active,
-    .button-green:active,
-    .button-purple:active,
-    .button-orange:active,
-    .button-red:active {
-      background-color: #FDEBD0;
-      color: inherit;
+    
+    .button-blue:active {
+      background-color: #FDEBD0; 
+      color: #2874A6;
     }
-
+    
+    .button-yellow:active {
+      background-color: #FDEBD0; 
+      color: #B7950B;
+    }
+    
+    .button-green:active {
+      background-color: #FDEBD0; 
+      color: #239B56;
+    }
+    
+    .button-purple:active {
+      background-color: #FDEBD0; 
+      color: #6C3483;
+    }    
+    
+    .button-orange:active {
+      background-color: #FDEBD0; 
+      color: #AF601A;
+    }    
+    
+    .button-red:active {
+      background-color: #FDEBD0; 
+      color: #B03A2E;
+    }    
+    
     .header {
       display: flex;
       gap: 30px;
@@ -80,7 +118,7 @@
 
     .header button {
       margin: 0 10px;
-      background-color: #333333;
+      background-color: #333333; 
       color: #FEF5E7;
       border: none;
       width: 175px;
@@ -90,52 +128,29 @@
       cursor: pointer;
       font-size: 26px;
     }
-
+    
     .header button:active {
       background-color: #FEF5E7;
       color: #333333;
     }
-
+   
     /* Adjusted styles for different menu containers */
-
-    #InstrumentosSoundboard .button-container {
-      grid-template-rows: repeat(8, 1fr);
+    
+    #InstrumentosSoundboard .instrumentos-container {
+      grid-template-rows: repeat(8, 1fr); 
       grid-template-columns: repeat(4, 1fr);
     }
 
-    #RelatosSoundboard .button-container {
+    #RelatosSoundboard .relatos-container {
       grid-template-rows: repeat(5, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
 
-    #LenguajeSoundboard .button-container {
+    #LenguajeSoundboard .lenguaje-container {
       grid-template-rows: repeat(5, 1fr);
       grid-template-columns: repeat(4, 1fr);
     }
   </style>
-  <script>
-    function playSound(soundFilePath) {
-      // Code to play sound
-      console.log("Playing sound: " + soundFilePath);
-    }
-    function showInstrumentos() {
-      document.getElementById("InstrumentosSoundboard").style.display = "block";
-      document.getElementById("RelatosSoundboard").style.display = "none";
-      document.getElementById("LenguajeSoundboard").style.display = "none";
-    }
-    function showRelatos() {
-      document.getElementById("InstrumentosSoundboard").style.display = "none";
-      document.getElementById("RelatosSoundboard").style.display = "block";
-      document.getElementById("LenguajeSoundboard").style.display = "none";
-    }
-    function showLenguaje() {
-      document.getElementById("InstrumentosSoundboard").style.display = "none";
-      document.getElementById("RelatosSoundboard").style.display = "none";
-      document.getElementById("LenguajeSoundboard").style.display = "block";
-    }
-      window.onload = showInstrumentos;
-  </script>
-
 </head>
 <body>
   <div class="header">
@@ -144,8 +159,8 @@
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
 
-  <div id="InstrumentosSoundboard" class="button-container">
-    <div class="button-container">
+  <div id="InstrumentosSoundboard" class="instrumentos-container">
+    <div class="instrumentos-container">
       <a href="#/Trutruka1" class="button button-blue" onclick="playSound('Trutruka/Tru 1.wav')">Trutruka 1</a>
       <a href="#/Trutruka2" class="button button-blue" onclick="playSound('Trutruka/Tru 2.wav')">Trutruka 2</a>
       <a href="#/Trutruka3" class="button button-blue" onclick="playSound('Trutruka/Tru 3.wav')">Trutruka 3</a>
@@ -181,8 +196,8 @@
     </div>
   </div>
 
-  <div id="RelatosSoundboard" class="button-container">
-    <div class="button-container">
+  <div id="RelatosSoundboard" class="relatos-container">
+    <div class="relatos-container">
       <a href="#/Relato1" class="button button-orange" onclick="playSound('Relatos/Rel 1.wav')">Relato 1</a>
       <a href="#/Relato2" class="button button-orange" onclick="playSound('Relatos/Rel 2.wav')">Relato 2</a>
       <a href="#/Relato3" class="button button-orange" onclick="playSound('Relatos/Rel 3.wav')">Relato 3</a>
@@ -194,8 +209,8 @@
     </div>
   </div>
 
-  <div id="LenguajeSoundboard" class="button-container">
-    <div class="button-container">
+  <div id="LenguajeSoundboard" class="lenguaje-container">
+    <div class="lenguaje-container">
       <a href="#/Lenguaje1" class="button button-red" onclick="playSound('Lenguaje/Leng 1.wav')">Lenguaje 1</a>
       <a href="#/Lenguaje2" class="button button-red" onclick="playSound('Lenguaje/Leng 2.wav')">Lenguaje 2</a>
       <a href="#/Lenguaje3" class="button button-red" onclick="playSound('Lenguaje/Leng 3.wav')">Lenguaje 3</a>
@@ -218,5 +233,44 @@
       <a href="#/Lenguaje20" class="button button-red" onclick="playSound('Lenguaje/Leng 20.wav')">Lenguaje 20</a>
     </div>
   </div>
+
+  <script>
+    function playSound(soundPath) {
+      const audio = new Audio(soundPath);
+      audio.play();
+    }
+
+    function showInstrumentos() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "block";
+      RelatosSoundboard.style.display = "none";
+      LenguajeSoundboard.style.display = "none";
+    }
+
+    function showRelatos() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "none";
+      RelatosSoundboard.style.display = "block";
+      LenguajeSoundboard.style.display = "none";
+    }
+
+    function showLenguaje() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "none";
+      RelatosSoundboard.style.display = "none";
+      LenguajeSoundboard.style.display = "block";
+    }
+
+    window.onload = showInstrumentos;
+  </script>
 </body>
 </html>
