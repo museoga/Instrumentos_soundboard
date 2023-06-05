@@ -221,6 +221,38 @@
       const audio = new Audio(soundPath);
       audio.play();
     }
+
+    function showInstrumentos() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "grid";
+      RelatosSoundboard.style.display = "none";
+      LenguajeSoundboard.style.display = "none";
+    }
+
+    function showRelatos() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "none";
+      RelatosSoundboard.style.display = "grid";
+      LenguajeSoundboard.style.display = "none";
+    }
+
+    function showLenguaje() {
+      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
+      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
+      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
+
+      InstrumentosSoundboard.style.display = "none";
+      RelatosSoundboard.style.display = "none";
+      LenguajeSoundboard.style.display = "grid";
+    }
+
+    window.onload = showInstrumentos;
   </script>
 </body>
 </html>
