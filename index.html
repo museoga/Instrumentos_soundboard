@@ -113,6 +113,29 @@
       grid-template-columns: repeat(4, 1fr);
     }
   </style>
+  <script>
+    function playSound(soundFilePath) {
+      // Code to play sound
+      console.log("Playing sound: " + soundFilePath);
+    }
+    function showInstrumentos() {
+      document.getElementById("InstrumentosSoundboard").style.display = "block";
+      document.getElementById("RelatosSoundboard").style.display = "none";
+      document.getElementById("LenguajeSoundboard").style.display = "none";
+    }
+    function showRelatos() {
+      document.getElementById("InstrumentosSoundboard").style.display = "none";
+      document.getElementById("RelatosSoundboard").style.display = "block";
+      document.getElementById("LenguajeSoundboard").style.display = "none";
+    }
+    function showLenguaje() {
+      document.getElementById("InstrumentosSoundboard").style.display = "none";
+      document.getElementById("RelatosSoundboard").style.display = "none";
+      document.getElementById("LenguajeSoundboard").style.display = "block";
+    }
+      window.onload = showInstrumentos;
+  </script>
+
 </head>
 <body>
   <div class="header">
@@ -195,44 +218,5 @@
       <a href="#/Lenguaje20" class="button button-red" onclick="playSound('Lenguaje/Leng 20.wav')">Lenguaje 20</a>
     </div>
   </div>
-
-  <script>
-    function playSound(soundPath) {
-      const audio = new Audio(soundPath);
-      audio.play();
-    }
-
-    function showInstrumentos() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "block";
-      RelatosSoundboard.style.display = "none";
-      LenguajeSoundboard.style.display = "none";
-    }
-
-    function showRelatos() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "block";
-      LenguajeSoundboard.style.display = "none";
-    }
-
-    function showLenguaje() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "none";
-      LenguajeSoundboard.style.display = "block";
-    }
-
-    window.onload = showInstrumentos;
-  </script>
 </body>
 </html>
