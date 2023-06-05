@@ -116,6 +116,9 @@
       color: #333333;
     }
    
+    .content {
+      display: none;
+    }    
     /* Adjusted styles for different menu containers */
     
     #InstrumentosSoundboard .button-container {
@@ -135,11 +138,17 @@
   </style>
 </head>
 <body>
-  <div class="header">
-    <button onclick="showInstrumentos()">Instrumentos</button>
-    <button onclick="showRelatos()">Relatos</button>
-    <button onclick="showLenguaje()">Lenguaje</button>
-  </div>
+<nav>
+  <ul>
+    <li><button onclick="showContent('instrumentos')">Instrumentos</button></li>
+    <li><button onclick="showContent('relatos')">Relatos</button></li>
+    <li><button onclick="showContent('lenguaje')">Lenguaje</button></li>
+  </ul>
+</nav>
+
+<div id="instrumentosSoundboard" class="content">Instrumentos Content</div>
+<div id="relatosSoundboard" class="content">Relatos Content</div>
+<div id="lenguajeSoundboard" class="content">Lenguaje Content</div>
 
   <div id="InstrumentosSoundboard" class="button-container">
     <div class="button-container">
@@ -232,27 +241,17 @@
       LenguajeSoundboard.style.display = "none";
     }
 
-    function showRelatos() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "block";
-      LenguajeSoundboard.style.display = "none";
+    function showContent(contentId) {
+      // Hide all content elements
+      var contentElements = document.getElementsByClassName("content");
+      for (var i = 0; i < contentElements.length; i++) {
+      contentElements[i].style.display = "none";
     }
-
-    function showLenguaje() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "none";
-      LenguajeSoundboard.style.display = "block";
+  
+      // Show the selected content element
+      var selectedContent = document.getElementById(contentId + "Soundboard");
+      selectedContent.style.display = "block";
     }
-
-    window.onload = showInstrumentos;
   </script>
 </body>
 </html>
