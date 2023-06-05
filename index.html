@@ -12,25 +12,7 @@
       text-align: center;
     }
 
-    .instrumentos-container {
-      display: grid;
-      gap: 20px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10%;
-      margin-bottom: 10px;
-    }
-    
-    .relatos-container {
-      display: grid;
-      gap: 50px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 10%;
-      margin-bottom: 10px;
-    }
-    
-    .lenguaje-container {
+    .button-container {
       display: grid;
       gap: 20px;
       align-items: center;
@@ -136,17 +118,17 @@
    
     /* Adjusted styles for different menu containers */
     
-    #InstrumentosSoundboard .instrumentos-container {
+    #InstrumentosSoundboard .button-container {
       grid-template-rows: repeat(8, 1fr); 
       grid-template-columns: repeat(4, 1fr);
     }
 
-    #RelatosSoundboard .relatos-container {
+    #RelatosSoundboard .button-container {
       grid-template-rows: repeat(5, 1fr);
       grid-template-columns: repeat(2, 1fr);
     }
 
-    #LenguajeSoundboard .lenguaje-container {
+    #LenguajeSoundboard .button-container {
       grid-template-rows: repeat(5, 1fr);
       grid-template-columns: repeat(4, 1fr);
     }
@@ -159,8 +141,8 @@
     <button onclick="showLenguaje()">Lenguaje</button>
   </div>
 
-  <div id="InstrumentosSoundboard" class="instrumentos-container">
-    <div class="instrumentos-container">
+  <div id="InstrumentosSoundboard" class="button-container">
+    <div class="button-container">
       <a href="#/Trutruka1" class="button button-blue" onclick="playSound('Trutruka/Tru 1.wav')">Trutruka 1</a>
       <a href="#/Trutruka2" class="button button-blue" onclick="playSound('Trutruka/Tru 2.wav')">Trutruka 2</a>
       <a href="#/Trutruka3" class="button button-blue" onclick="playSound('Trutruka/Tru 3.wav')">Trutruka 3</a>
@@ -196,8 +178,8 @@
     </div>
   </div>
 
-  <div id="RelatosSoundboard" class="relatos-container">
-    <div class="relatos-container">
+  <div id="RelatosSoundboard" class="button-container">
+    <div class="button-container">
       <a href="#/Relato1" class="button button-orange" onclick="playSound('Relatos/Rel 1.wav')">Relato 1</a>
       <a href="#/Relato2" class="button button-orange" onclick="playSound('Relatos/Rel 2.wav')">Relato 2</a>
       <a href="#/Relato3" class="button button-orange" onclick="playSound('Relatos/Rel 3.wav')">Relato 3</a>
@@ -209,8 +191,8 @@
     </div>
   </div>
 
-  <div id="LenguajeSoundboard" class="lenguaje-container">
-    <div class="lenguaje-container">
+  <div id="LenguajeSoundboard" class="button-container">
+    <div class="button-container">
       <a href="#/Lenguaje1" class="button button-red" onclick="playSound('Lenguaje/Leng 1.wav')">Lenguaje 1</a>
       <a href="#/Lenguaje2" class="button button-red" onclick="playSound('Lenguaje/Leng 2.wav')">Lenguaje 2</a>
       <a href="#/Lenguaje3" class="button button-red" onclick="playSound('Lenguaje/Leng 3.wav')">Lenguaje 3</a>
