@@ -35,61 +35,41 @@
       text-decoration: none;
       margin: auto;
     }
-    
+
     .button-blue {
       background-color: #2874A6; /* Change this to the desired color for Trutruka buttons */
     }
-    
+
     .button-yellow {
       background-color: #B7950B; /* Change this to the desired color for Trutruka buttons */
     }
-    
+
     .button-green {
       background-color: #239B56; /* Change this to the desired color for Trutruka buttons */
     }
-    
+
     .button-purple {
       background-color: #6C3483; /* Change this to the desired color for Trutruka buttons */
     }
-    
+
     .button-orange {
       background-color: #AF601A; /* Change this to the desired color for Trutruka buttons */
     }
-    
+
     .button-red {
       background-color: #B03A2E; /* Change this to the desired color for Trutruka buttons */
     }
-    
-    .button-blue:active {
-      background-color: #FDEBD0; 
-      color: #2874A6;
-    }
-    
-    .button-yellow:active {
-      background-color: #FDEBD0; 
-      color: #B7950B;
-    }
-    
-    .button-green:active {
-      background-color: #FDEBD0; 
-      color: #239B56;
-    }
-    
-    .button-purple:active {
-      background-color: #FDEBD0; 
-      color: #6C3483;
-    }    
-    
-    .button-orange:active {
-      background-color: #FDEBD0; 
-      color: #AF601A;
-    }    
-    
+
+    .button-blue:active,
+    .button-yellow:active,
+    .button-green:active,
+    .button-purple:active,
+    .button-orange:active,
     .button-red:active {
-      background-color: #FDEBD0; 
-      color: #B03A2E;
-    }    
-    
+      background-color: #FDEBD0;
+      color: inherit;
+    }
+
     .header {
       display: flex;
       gap: 30px;
@@ -100,7 +80,7 @@
 
     .header button {
       margin: 0 10px;
-      background-color: #333333; 
+      background-color: #333333;
       color: #FEF5E7;
       border: none;
       width: 175px;
@@ -110,16 +90,16 @@
       cursor: pointer;
       font-size: 26px;
     }
-    
+
     .header button:active {
       background-color: #FEF5E7;
       color: #333333;
     }
-   
+
     /* Adjusted styles for different menu containers */
-    
+
     #InstrumentosSoundboard .button-container {
-      grid-template-rows: repeat(8, 1fr); 
+      grid-template-rows: repeat(8, 1fr);
       grid-template-columns: repeat(4, 1fr);
     }
 
