@@ -292,9 +292,6 @@
 
     function playSound(soundPath) {
       const audio = new Audio(soundPath);
-
-      audio.pause(); // Pause the audio
-      audio.currentTime = 0; // Reset the playback position
       audio.play(); // Start playing the audio
     }
 
