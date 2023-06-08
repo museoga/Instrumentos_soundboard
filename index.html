@@ -36,6 +36,36 @@
       margin: auto;
     }
     
+    .button-relatos {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      height: 100px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 32px;
+      color: #FEF5E7;
+      text-decoration: none;
+      margin: auto;
+    }
+    
+    .button-lenguaje {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      height: 100px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 32px;
+      color: #FEF5E7;
+      text-decoration: none;
+      margin: auto;
+    }
+    
     .button-blue {
       background-color: #2874A6; /* Change this to the desired color for Trutruka buttons */
     }
@@ -129,8 +159,8 @@
     }
 
     #LenguajeSoundboard .button-container {
-      grid-template-rows: repeat(5, 1fr);
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   </style>
 </head>
@@ -180,40 +210,26 @@
 
   <div id="RelatosSoundboard" class="button-container">
     <div class="button-container">
-      <a href="#/Relato1" class="button button-orange" onclick="playSound('Relatos/Rel 1.wav')">Relato 1</a>
-      <a href="#/Relato2" class="button button-orange" onclick="playSound('Relatos/Rel 2.wav')">Relato 2</a>
-      <a href="#/Relato3" class="button button-orange" onclick="playSound('Relatos/Rel 3.wav')">Relato 3</a>
-      <a href="#/Relato4" class="button button-orange" onclick="playSound('Relatos/Rel 4.wav')">Relato 4</a>
-      <a href="#/Relato5" class="button button-orange" onclick="playSound('Relatos/Rel 5.wav')">Relato 5</a>
-      <a href="#/Relato6" class="button button-orange" onclick="playSound('Relatos/Rel 6.wav')">Relato 6</a>
-      <a href="#/Relato7" class="button button-orange" onclick="playSound('Relatos/Rel 7.wav')">Relato 7</a>
-      <a href="#/Relato8" class="button button-orange" onclick="playSound('Relatos/Rel 8.wav')">Relato 8</a>
-      <a href="#/Relato9" class="button button-orange" onclick="playSound('Relatos/Rel 9.wav')">Relato 9</a>
+      <a href="#/Relato1" class="button-relatos button-orange" onclick="playSound('Relatos/Neuquen_y_Limay.wav')">Neuquén y Limay</a>
+      <a href="#/Relato2" class="button-relatos button-orange" onclick="playSound('Relatos/El_sol_y_la_luna.wav')">El sol y la luna</a>
+      <a href="#/Relato3" class="button-relatos button-orange" onclick="playSound('Relatos/Cai_Cai_y_Tren_Tren.wav')">Cai Cai y Tren Tren</a>
     </div>
   </div>
 
   <div id="LenguajeSoundboard" class="button-container">
     <div class="button-container">
-      <a href="#/Lenguaje1" class="button button-purple" onclick="playSound('Lenguaje/Leng 1.wav')">Lenguaje 1</a>
-      <a href="#/Lenguaje2" class="button button-purple" onclick="playSound('Lenguaje/Leng 2.wav')">Lenguaje 2</a>
-      <a href="#/Lenguaje3" class="button button-purple" onclick="playSound('Lenguaje/Leng 3.wav')">Lenguaje 3</a>
-      <a href="#/Lenguaje4" class="button button-purple" onclick="playSound('Lenguaje/Leng 4.wav')">Lenguaje 4</a>
-      <a href="#/Lenguaje5" class="button button-purple" onclick="playSound('Lenguaje/Leng 5.wav')">Lenguaje 5</a>
-      <a href="#/Lenguaje6" class="button button-purple" onclick="playSound('Lenguaje/Leng 6.wav')">Lenguaje 6</a>
-      <a href="#/Lenguaje7" class="button button-purple" onclick="playSound('Lenguaje/Leng 7.wav')">Lenguaje 7</a>
-      <a href="#/Lenguaje8" class="button button-purple" onclick="playSound('Lenguaje/Leng 8.wav')">Lenguaje 8</a>
-      <a href="#/Lenguaje9" class="button button-purple" onclick="playSound('Lenguaje/Leng 9.wav')">Lenguaje 9</a>
-      <a href="#/Lenguaje10" class="button button-purple" onclick="playSound('Lenguaje/Leng 10.wav')">Lenguaje 10</a>
-      <a href="#/Lenguaje11" class="button button-purple" onclick="playSound('Lenguaje/Leng 11.wav')">Lenguaje 11</a>
-      <a href="#/Lenguaje12" class="button button-purple" onclick="playSound('Lenguaje/Leng 12.wav')">Lenguaje 12</a>
-      <a href="#/Lenguaje13" class="button button-purple" onclick="playSound('Lenguaje/Leng 13.wav')">Lenguaje 13</a>
-      <a href="#/Lenguaje14" class="button button-purple" onclick="playSound('Lenguaje/Leng 14.wav')">Lenguaje 14</a>
-      <a href="#/Lenguaje15" class="button button-purple" onclick="playSound('Lenguaje/Leng 15.wav')">Lenguaje 15</a>
-      <a href="#/Lenguaje16" class="button button-purple" onclick="playSound('Lenguaje/Leng 16.wav')">Lenguaje 16</a>
-      <a href="#/Lenguaje17" class="button button-purple" onclick="playSound('Lenguaje/Leng 17.wav')">Lenguaje 17</a>
-      <a href="#/Lenguaje18" class="button button-purple" onclick="playSound('Lenguaje/Leng 18.wav')">Lenguaje 18</a>
-      <a href="#/Lenguaje19" class="button button-purple" onclick="playSound('Lenguaje/Leng 19.wav')">Lenguaje 19</a>
-      <a href="#/Lenguaje20" class="button button-purple" onclick="playSound('Lenguaje/Leng 20.wav')">Lenguaje 20</a>
+      <a href="#/Lenguaje1" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Hola_Mari_Mari.wav')">Mari Mari (Hola)</a>
+      <a href="#/Lenguaje2" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Adiós_Pewkallal.wav')">Pewkallal (Adiós)</a>
+      <a href="#/Lenguaje3" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Gracias_Mañun.wav')">Mañun (Gracias)</a>
+      <a href="#/Lenguaje4" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Amarillo_Choz.wav')">Choz (Amarillo)</a>
+      <a href="#/Lenguaje5" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Árbol_Aliwen.wav')">Aliwen (Árbol)</a>
+      <a href="#/Lenguaje6" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Bosque_Mawida.wav')">Mawida (Bosque)</a>
+      <a href="#/Lenguaje7" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Cueva_Lolo.wav')">Lolo (Cueva)</a>
+      <a href="#/Lenguaje8" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Río_Lewfü.wav')">Lewfü (Río)</a>
+      <a href="#/Lenguaje9" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Aguilucho_Trarü.wav')">Trarü (Aguilucho)</a>
+      <a href="#/Lenguaje10" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Serpiente_Filu.wav')">Filu (Serpiente)</a>
+      <a href="#/Lenguaje11" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Mujer_Domo.wav')">Domo (Mujer)</a>
+      <a href="#/Lenguaje12" class="button-lenguaje button-purple" onclick="playSound('Lenguaje/Abuelo paterno_Laku.wav')">Laku (Abuelo paterno)</a>
     </div>
   </div>
 
@@ -255,35 +271,21 @@
     preloadSound("Pifilca/Pif 6.wav");
     preloadSound("Pifilca/Pif 7.wav");
     preloadSound("Pifilca/Pif 8.wav");
-    preloadSound("Relatos/Rel 1.wav");
-    preloadSound("Relatos/Rel 2.wav");
-    preloadSound("Relatos/Rel 3.wav");
-    preloadSound("Relatos/Rel 4.wav");
-    preloadSound("Relatos/Rel 5.wav");
-    preloadSound("Relatos/Rel 6.wav");
-    preloadSound("Relatos/Rel 7.wav");
-    preloadSound("Relatos/Rel 8.wav");
-    preloadSound("Relatos/Rel 9.wav");
-    preloadSound("Lenguaje/Leng 1.wav");
-    preloadSound("Lenguaje/Leng 2.wav");
-    preloadSound("Lenguaje/Leng 3.wav");
-    preloadSound("Lenguaje/Leng 4.wav");
-    preloadSound("Lenguaje/Leng 5.wav");
-    preloadSound("Lenguaje/Leng 6.wav");
-    preloadSound("Lenguaje/Leng 7.wav");
-    preloadSound("Lenguaje/Leng 8.wav");
-    preloadSound("Lenguaje/Leng 9.wav");
-    preloadSound("Lenguaje/Leng 10.wav");
-    preloadSound("Lenguaje/Leng 11.wav");
-    preloadSound("Lenguaje/Leng 12.wav");
-    preloadSound("Lenguaje/Leng 13.wav");
-    preloadSound("Lenguaje/Leng 14.wav");
-    preloadSound("Lenguaje/Leng 15.wav");
-    preloadSound("Lenguaje/Leng 16.wav");
-    preloadSound("Lenguaje/Leng 17.wav");
-    preloadSound("Lenguaje/Leng 18.wav");
-    preloadSound("Lenguaje/Leng 19.wav");
-    preloadSound("Lenguaje/Leng 20.wav");
+    preloadSound("Relatos/Neuquen_y_Limay.wav");
+    preloadSound("Relatos/El_sol_y_la_luna.wav");
+    preloadSound("Relatos/Cai_Cai_y_Tren_Tren.wav");
+    preloadSound("Lenguaje/Hola_Mari_Mari.wav");
+    preloadSound("Lenguaje/Adiós_Pewkallal.wav");
+    preloadSound("Lenguaje/Gracias_Mañun.wav");
+    preloadSound("Lenguaje/Amarillo_Choz.wav");
+    preloadSound("Lenguaje/Árbol_Aliwen.wav");
+    preloadSound("Lenguaje/Bosque_Mawida.wav");
+    preloadSound("Lenguaje/Cueva_Lolo.wav");
+    preloadSound("Lenguaje/Río_Lewfü.wav");
+    preloadSound("Lenguaje/Aguilucho_Trarü.wav");
+    preloadSound("Lenguaje/Serpiente_Filu.wav");
+    preloadSound("Lenguaje/Mujer_Domo.wav");
+    preloadSound("Lenguaje/Abuelo paterno_Laku.wav");
     
     function playSound(soundPath) {
       const audio = new Audio(soundPath);
