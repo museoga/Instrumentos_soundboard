@@ -287,9 +287,16 @@
     preloadSound("Lenguaje/Mujer_Domo.wav");
     preloadSound("Lenguaje/Abuelo paterno_Laku.wav");
     
+    var audio = new Audio();
+
     function playSound(soundPath) {
-      const audio = new Audio(soundPath);
-      audio.play();
+      if (audio.src === soundPath && !audio.paused) {
+        audio.pause();
+        audio.currentTime = 0;
+      } else {
+        audio.src = soundPath;
+        audio.play();
+      }
     }
 
     function showInstrumentos() {
