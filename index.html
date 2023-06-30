@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Soundboard</title>
+  <title>Instrumentos Soundboard</title>
   <style>
     body {
       background-image: url('Images/background.png');
@@ -36,36 +36,6 @@
       margin: auto;
     }
     
-    .button-relatos {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      width: 400px;
-      height: 100px;
-      border: none;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 32px;
-      color: #FEF5E7;
-      text-decoration: none;
-      margin: auto;
-    }
-    
-    .button-lenguaje {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      width: 300px;
-      height: 100px;
-      border: none;
-      cursor: pointer;
-      border-radius: 10px;
-      font-size: 32px;
-      color: #FEF5E7;
-      text-decoration: none;
-      margin: auto;
-    }
-    
     .button-blue {
       background-color: #2874A6; 
     }
@@ -81,15 +51,7 @@
     .button-purple {
       background-color: #6C3483; 
     }
-    
-    .button-darkergreen {
-      background-color: #117A65; 
-    }
-    
-    .button-orange {
-      background-color: #AF601A; 
-    }
-    
+        
     .button-red {
       background-color: #B03A2E; 
     }
@@ -113,48 +75,12 @@
       background-color: #FDEBD0; 
       color: #6C3483;
     }    
-
-    .button-darkergreen:active {
-      background-color: #FDEBD0;
-      color: #117A65; 
-    }
-    
-    .button-orange:active {
-      background-color: #FDEBD0; 
-      color: #AF601A;
-    }    
-    
+  
     .button-red:active {
       background-color: #FDEBD0; 
       color: #B03A2E;
     }    
     
-    .header {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 3%;
-      margin-bottom: 20px;
-    }
-
-    .header button {
-      margin: 0 10px;
-      background-color: #333333; 
-      color: #FEF5E7;
-      border: none;
-      width: 175px;
-      height: 60px;
-      border-radius: 5px;
-      padding: 5px 10px;
-      cursor: pointer;
-      font-size: 26px;
-    }
-    
-    .header button:active {
-      background-color: #FEF5E7;
-      color: #333333;
-    }
-   
     /* Adjusted styles for different menu containers */
     
     #InstrumentosSoundboard .button-container {
@@ -162,23 +88,9 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    #RelatosSoundboard .button-container {
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: repeat(1, 1fr);
-    }
-
-    #LenguajeSoundboard .button-container {
-      grid-template-rows: repeat(4, 1fr);
-      grid-template-columns: repeat(3, 1fr);
-    }
   </style>
 </head>
 <body>
-  <div class="header">
-    <button onclick="showInstrumentos()">Instrumentos</button>
-    <button onclick="showRelatos()">Relatos</button>
-    <button onclick="showLenguaje()">Lenguaje</button>
-  </div>
 
   <div id="InstrumentosSoundboard" class="button-container">
     <div class="button-container">
@@ -222,31 +134,6 @@
       <a href="#/Kultrun6" class="button button-purple" onclick="playSound('Kultrun/Kul 6.wav')">Kultrun 6</a>
       <a href="#/Kultrun7" class="button button-purple" onclick="playSound('Kultrun/Kul 7.wav')">Kultrun 7</a>
       <a href="#/Kultrun8" class="button button-purple" onclick="playSound('Kultrun/Kul 8.wav')">Kultrun 8</a>
-    </div>
-  </div>
-
-  <div id="RelatosSoundboard" class="button-container">
-    <div class="button-container">
-      <a href="#/Relato1" class="button-relatos button-orange" onclick="playSound('Relatos/Neuquen_y_Limay.wav')">Neuquén y Limay</a>
-      <a href="#/Relato2" class="button-relatos button-orange" onclick="playSound('Relatos/El_sol_y_la_luna.wav')">El sol y la luna</a>
-      <a href="#/Relato3" class="button-relatos button-orange" onclick="playSound('Relatos/Cai_Cai_y_Tren_Tren.wav')">Cai Cai y Tren Tren</a>
-    </div>
-  </div>
-
-  <div id="LenguajeSoundboard" class="button-container">
-    <div class="button-container">
-      <a href="#/Lenguaje1" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Hola_Mari_Mari.wav')">Mari Mari (Hola)</a>
-      <a href="#/Lenguaje2" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Adiós_Pewkallal.wav')">Pewkallal (Adiós)</a>
-      <a href="#/Lenguaje3" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Gracias_Mañun.wav')">Mañun (Gracias)</a>
-      <a href="#/Lenguaje4" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Amarillo_Choz.wav')">Choz (Amarillo)</a>
-      <a href="#/Lenguaje5" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Árbol_Aliwen.wav')">Aliwen (Árbol)</a>
-      <a href="#/Lenguaje6" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Bosque_Mawida.wav')">Mawida (Bosque)</a>
-      <a href="#/Lenguaje7" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Cueva_Lolo.wav')">Lolo (Cueva)</a>
-      <a href="#/Lenguaje8" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Río_Lewfü.wav')">Lewfü (Río)</a>
-      <a href="#/Lenguaje9" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Aguilucho_Trarü.wav')">Trarü (Aguilucho)</a>
-      <a href="#/Lenguaje10" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Serpiente_Filu.wav')">Filu (Serpiente)</a>
-      <a href="#/Lenguaje11" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Mujer_Domo.wav')">Domo (Mujer)</a>
-      <a href="#/Lenguaje12" class="button-lenguaje button-darkergreen" onclick="playSound('Lenguaje/Abuelo paterno_Laku.wav')">Laku (Abuelo paterno)</a>
     </div>
   </div>
 
@@ -296,22 +183,6 @@
     preloadSound("Kultrun/Kul 6.wav");
     preloadSound("Kultrun/Kul 7.wav");
     preloadSound("Kultrun/Kul 8.wav");
-    preloadSound("Relatos/Neuquen_y_Limay.wav");
-    preloadSound("Relatos/El_sol_y_la_luna.wav");
-    preloadSound("Relatos/Cai_Cai_y_Tren_Tren.wav");
-    preloadSound("Lenguaje/Hola_Mari_Mari.wav");
-    preloadSound("Lenguaje/Adiós_Pewkallal.wav");
-    preloadSound("Lenguaje/Gracias_Mañun.wav");
-    preloadSound("Lenguaje/Amarillo_Choz.wav");
-    preloadSound("Lenguaje/Árbol_Aliwen.wav");
-    preloadSound("Lenguaje/Bosque_Mawida.wav");
-    preloadSound("Lenguaje/Cueva_Lolo.wav");
-    preloadSound("Lenguaje/Río_Lewfü.wav");
-    preloadSound("Lenguaje/Aguilucho_Trarü.wav");
-    preloadSound("Lenguaje/Serpiente_Filu.wav");
-    preloadSound("Lenguaje/Mujer_Domo.wav");
-    preloadSound("Lenguaje/Abuelo paterno_Laku.wav");
-    
     var audio = new Audio();
 
     function playSound(soundPath) {
@@ -326,35 +197,9 @@
 
     function showInstrumentos() {
       const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
       InstrumentosSoundboard.style.display = "grid";
-      RelatosSoundboard.style.display = "none";
-      LenguajeSoundboard.style.display = "none";
     }
 
-    function showRelatos() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "grid";
-      LenguajeSoundboard.style.display = "none";
-    }
-
-    function showLenguaje() {
-      const InstrumentosSoundboard = document.getElementById("InstrumentosSoundboard");
-      const RelatosSoundboard = document.getElementById("RelatosSoundboard");
-      const LenguajeSoundboard = document.getElementById("LenguajeSoundboard");
-
-      InstrumentosSoundboard.style.display = "none";
-      RelatosSoundboard.style.display = "none";
-      LenguajeSoundboard.style.display = "grid";
-    }
-
-    window.onload = showInstrumentos;
   </script>
 </body>
 </html>
